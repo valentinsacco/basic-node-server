@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "author": "valentin sacco",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "16.0.0",
+    "express": "4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "6.2.7",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "2.0.15"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "babel src/index.js --out-file build/index.js",
+    "dev": "nodemon src/index.js --exec babel-node"
+  }
+}
