@@ -1,14 +1,14 @@
 import { connect } from 'mongoose'
 
-const DATABASE_URI = process.env.DB_URI || ''
+const MONGODB_URI = process.env.DB_URI || ''
 
-if (DATABASE_URI) {
+if (MONGODB_URI) {
     (async () => {
         try {
-            const connection = await connect(DATABASE_URI)
+            const connection = await connect(MONGODB_URI)
             console.log(`Database connected on ${connection.connection.host}`)
         } catch (error) {
-            throw new Error(`Failed to connect to ${DATABASE_URI}`)
+            throw new Error(`Failed to connect to ${MONGODB_URI}`)
         }
     })()
 } else {
